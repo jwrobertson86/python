@@ -1,0 +1,6 @@
+# TensorFlow Exercises
+
+I took a class in TensorFlow 2.0 in early 2026. From this, I have included a couple of exercises that were originally meant to be code-alongs with the Udemy instructor but quickly turned into extended episodes of problem-solving because a lot of the tools used in TF 2.0 were deprecated between then and now (v2.20).
+
+* `01 CNN on Real Images.ipynb` - An exercise in using convolutional neural networks to classify cells infected with malaria vs. not, based on a public NIH database. The replacement of `ImageDataGenerator` with `image_dataset_from_directory` changed the workflow fairly substantially here and required independently learning how to use it toward the same end.
+* `02 RNN on a Real Time Series.ipynb` - An exercise in using recurrent neural networks to project time-series data. For reasons I could not understand, using `timeseries_dataset_from_array` wasn't giving me a workable RNN. Eventually, I used the simpler `model.fit(x,y)` paradigm, like you'd use with `sklearn` or a simpler ANN, instead of trying to make use of the `Dataset` paradigm in this instance and that worked out much better.
